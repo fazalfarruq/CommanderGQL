@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CommanderGQL.GraphQL;
 using CommanderGQL.Models;
+using GraphiQl;
 using GraphQL.Server.Ui.Voyager;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -60,6 +61,8 @@ namespace CommanderGQL
             {
                 GraphQLEndPoint = "/graphql"
             });
+
+            app.UseGraphiQl("/graphiql");
         }
     }
 }
